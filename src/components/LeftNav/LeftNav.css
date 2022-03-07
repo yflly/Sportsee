@@ -9,6 +9,12 @@
   width: 117px;
 }
 
+@media (max-width: 1025px) {
+  .leftNav {
+    height: 100%;
+  }
+}
+
 .copyright {
   font-size: 0.8rem;
   transform: rotate(180deg);
