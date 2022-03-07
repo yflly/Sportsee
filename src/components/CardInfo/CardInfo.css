@@ -1,0 +1,63 @@
+.containerCardInfo {
+  border-radius: 5px;
+  background-color: #fbfbfb;
+  width: 258px;
+  padding: 32px;
+  display: flex;
+}
+
+@media (max-width: 1025px) {
+  .containerCardInfo {
+    padding: 16px;
+    margin: 15px 0;
+  }
+}
+
+.containerCardInfoText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.containerCardInfoText h3 {
+  font-size: 20px;
+  color: #282d30;
+  margin: 0;
+}
+
+.containerCardInfoText p {
+  font-weight: 500;
+  font-size: 14px;
+  color: #74798c;
+  margin: 0;
+}
+
+.containerCardInfoIconCalories,
+.containerCardInfoIconProteines,
+.containerCardInfoIconGlucides,
+.containerCardInfoIconLipides {
+  height: 60px;
+  width: 60px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 24px;
+}
+
+.containerCardInfoIconCalories {
+  background-color: #fbeced;
+}
+.containerCardInfoIconProteines {
+  background-color: #e6f5fc;
+}
+.containerCardInfoIconGlucides {
+  background-color: #fcf6e3;
+}
+.containerCardInfoIconLipides {
+  background-color: #ffe9ef;
+}
+
+.containerCardInfo img {
+  margin: 0;
+}
