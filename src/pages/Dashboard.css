@@ -1,0 +1,12 @@
+.containerDashboard {
+  display: grid;
+  grid-template-columns: 117px auto;
+}
+
+.containerCharts {
+  grid-column: 2;
+}
+
+.leftNav {
+  grid-column: 1;
+}
