@@ -1,0 +1,27 @@
+.leftNav {
+  align-items: center;
+  background: #020203;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 864px;
+  justify-content: space-around;
+  width: 117px;
+}
+
+.copyright {
+  font-size: 0.8rem;
+  transform: rotate(180deg);
+  writing-mode: sideways-lr;
+}
+
+.leftNavIconGroupLi {
+  align-items: center;
+  background: #fff;
+  border-radius: 6px;
+  display: flex;
+  height: 64px;
+  justify-content: center;
+  margin-bottom: 32px;
+  width: 64px;
+}
