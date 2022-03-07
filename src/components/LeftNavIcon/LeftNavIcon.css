@@ -1,0 +1,16 @@
+.linkLeftNavIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.iconLeftNav {
+  width: 32px;
+  height: 32px;
+  object-fit: fill;
+  margin: 0;
+}
