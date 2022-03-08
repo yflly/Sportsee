@@ -67,7 +67,7 @@ function ActivityChart({ id }) {
           barCategoryGap={1}
         >
           <CartesianGrid vertical={false} strokeDasharray="2 2" />
-          <Tooltip />
+          <Tooltip content={<ActivityChartTooltip />} />
           <XAxis dataKey="day" axisLine={false} tickLine={false} />
           <YAxis
             yAxisId="kg"
@@ -109,3 +109,20 @@ ActivityChart.propTypes = {
 };
 
 export default ActivityChart;
+
+//Tooltip ActivityChart
+function ActivityChartTooltip({ active, payload }) {
+  if (active) {
+    return (
+      <div className="customTooltip">
+        <p>{payload[0].value}kg</p>
+        <p>{payload[1].value}kCal</p>
+      </div>
+    );
+  }
+  return null;
+}
+ActivityChartTooltip.propTypes = {
+  active: PropTypes.bool,
+  payload: PropTypes.array,
+};
