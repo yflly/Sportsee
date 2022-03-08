@@ -1,6 +1,6 @@
 import TopNav from "../components/TopNav/TopNav";
 import LeftNav from "../components/LeftNav/LeftNav";
-import Charts from "./Charts";
+import Charts from "../components/Charts/Charts";
 
 import "./Dashboard.css";
 
