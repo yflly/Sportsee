@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from "react";
-import { getUser } from "../service/Api";
+import { getUser } from "../../service/Api";
 import { Redirect } from "react-router-dom";
 import "./Charts.css";
 
-import ActivityChart from "../components/ActivityChart/ActivityChart";
-import AverageSession from "../components/AverageSession/AverageSession";
-import PerformanceChart from "../components/PerformanceChart/PerformanceChart";
-import ScoreChart from "../components/ScoreChart/ScoreChart";
-import CardInfo from "../components/CardInfo/CardInfo";
+import ActivityChart from "../ActivityChart/ActivityChart";
+import AverageSession from "../AverageSession/AverageSession";
+import PerformanceChart from "../PerformanceChart/PerformanceChart";
+import ScoreChart from "../ScoreChart/ScoreChart";
+import CardInfo from "../CardInfo/CardInfo";
 
-import caloriesIcon from "../assets/caloriesIcon.png";
-import proteinsIcon from "../assets/proteinsIcon.png";
-import carbsIcon from "../assets/carbsIcon.png";
-import lipidsIcon from "../assets/lipidsIcon.png";
+import caloriesIcon from "../../assets/caloriesIcon.png";
+import proteinsIcon from "../../assets/proteinsIcon.png";
+import carbsIcon from "../../assets/carbsIcon.png";
+import lipidsIcon from "../../assets/lipidsIcon.png";
 
 function Charts({ match }) {
   const [data, setData] = useState([]);
