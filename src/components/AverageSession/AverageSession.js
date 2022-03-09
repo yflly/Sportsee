@@ -79,6 +79,7 @@ function AverageSessionsChart({ id }) {
             }}
           />
           <Tooltip
+            content={<AverageSessionsTooltip />}
             cursor={{
               stroke: "rgba(0, 0, 0, 0.1)",
               strokeWidth: 50,
@@ -96,3 +97,15 @@ AverageSessionsChart.propTypes = {
 };
 
 export default AverageSessionsChart;
+
+const AverageSessionsTooltip = ({ active, payload }) => {
+  if (active) {
+    return <div className="averageSessionTooltip">{payload[0].value} min</div>;
+  }
+  return null;
+};
+
+AverageSessionsTooltip.propTypes = {
+  active: PropTypes.bool,
+  payload: PropTypes.array,
+};
