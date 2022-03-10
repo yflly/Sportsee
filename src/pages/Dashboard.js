@@ -1,6 +1,7 @@
 import TopNav from "../components/TopNav/TopNav";
 import LeftNav from "../components/LeftNav/LeftNav";
 import Charts from "../components/Charts/Charts";
+import PropTypes from "prop-types";
 
 import "./Dashboard.css";
 
@@ -15,5 +16,9 @@ function Dashboard({ match }) {
     </div>
   );
 }
+
+Dashboard.protTypes = {
+  match: PropTypes.string.isRequired,
+};
 
 export default Dashboard;

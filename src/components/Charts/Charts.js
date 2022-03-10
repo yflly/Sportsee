@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { getUser } from "../../service/Api";
 import { Redirect } from "react-router-dom";
+import PropTypes from "prop-types";
 import "./Charts.css";
 
 import ActivityChart from "../ActivityChart/ActivityChart";
@@ -24,7 +25,6 @@ function Charts({ match }) {
     const getData = async () => {
       const request = await getUser(id);
       if (!request) return <Redirect to="/404" />;
-
       setData(request.data);
       setScore([
         { score: request.data.todayScore || request.data.score },
@@ -85,5 +85,9 @@ function Charts({ match }) {
     </main>
   );
 }
+
+Charts.protTypes = {
+  match: PropTypes.string.isRequired,
+};
 
 export default Charts;
