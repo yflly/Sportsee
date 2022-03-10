@@ -25,6 +25,16 @@ This page will in particular allow the user to follow the number of sessions car
    npm i
    ```
 3. Run the project (port 3000 by default)
+
    ```sh
    npm start
    ```
+
+   ## Back-end
+
+4. This project uses a micro API available with instructions [here](https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard).
+
+5. There are 2 endpoints availables:
+
+- `http://localhost:3001/user/12`
+- `http://localhost:3001/user/18`
