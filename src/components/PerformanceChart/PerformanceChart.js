@@ -17,7 +17,7 @@ function PerformanceChart({ id }) {
     const getData = async () => {
       const request = await getPerformance(id);
 
-      // Formater les données et mettre la première lettre en MAJ
+      // Format data and first letter tu upper case
       for (let i = 0, size = request.data.data.length; i < size; i++) {
         request.data.data[i] = {
           ...request.data.data[i],

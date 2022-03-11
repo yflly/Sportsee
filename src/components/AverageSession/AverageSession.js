@@ -19,7 +19,7 @@ function AverageSessionsChart({ id }) {
     const getData = async () => {
       const request = await getAverageSession(id);
 
-      // Formater les données
+      // Format the data
       const formatedData = request.data.sessions.map((session) => {
         switch (session.day) {
           case 1:
@@ -46,7 +46,7 @@ function AverageSessionsChart({ id }) {
     getData();
   }, [id]);
 
-  // Données pour le domain
+  // Data for the graphic
   const lengthArray = data.map((el) => el.sessionLength);
   const minY = Math.min(...lengthArray) / 1.6;
   const maxY = Math.max(...lengthArray) * 1.6;

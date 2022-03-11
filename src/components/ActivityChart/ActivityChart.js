@@ -21,7 +21,7 @@ function ActivityChart({ id }) {
     const getData = async () => {
       const request = await getActivity(id);
 
-      // Formater la date sur XAxis
+      // Format the date on XAxis
       for (let i = 0, length = request.data.sessions.length; i < length; i++) {
         request.data.sessions[i] = {
           ...request.data.sessions[i],
@@ -33,7 +33,7 @@ function ActivityChart({ id }) {
     getData();
   }, [id]);
 
-  // Data pour le domain
+  // Data kg and cal for the graphic
   const kgArray = data.map((el) => el.kilogram);
   const minYKg = Math.min(...kgArray) - 1;
   const maxYKg = Math.max(...kgArray) + 1;
