@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { getUser } from "../../service/Api";
-import { Redirect } from "react-router-dom";
 import PropTypes from "prop-types";
 import "./Charts.css";
 
@@ -14,28 +13,52 @@ import caloriesIcon from "../../assets/caloriesIcon.png";
 import proteinsIcon from "../../assets/proteinsIcon.png";
 import carbsIcon from "../../assets/carbsIcon.png";
 import lipidsIcon from "../../assets/lipidsIcon.png";
+import ErrorPage from "../ErrorPage/ErrorPage";
 
 function Charts({ match }) {
   const [data, setData] = useState([]);
   const [score, setScore] = useState([]);
-  const { userInfos, keyData } = data;
   const id = match.params.id;
+  const [error, setError] = useState([]);
+  const [errorApi, setErrorApi] = useState([]);
 
   useEffect(() => {
     const getData = async () => {
       const request = await getUser(id);
-      if (!request) return <Redirect to="/404" />;
-      setData(request.data);
+
+      //Check if API fail
+      if (!request) {
+        setErrorApi(true);
+      }
+
+      //Check status 404
+      if (request.status === 404) {
+        setError(true);
+      }
+
+      setData(request.result.data);
       setScore([
-        { score: request.data.todayScore || request.data.score },
+        { score: request.result.data.todayScore || request.result.data.score },
         {
-          score: 1 - request.data.todayScore || 1 - request.data.score,
+          score:
+            1 - request.result.data.todayScore || 1 - request.result.data.score,
         },
       ]);
     };
 
     getData();
   }, [id]);
+
+  //Return ErrorPage
+  if (errorApi === true) {
+    return <ErrorPage />;
+  }
+  if (error === true) {
+    return <ErrorPage />;
+  }
+
+  const { userInfos, keyData } = data;
+
   if (data.length === 0) return null;
 
   return (
