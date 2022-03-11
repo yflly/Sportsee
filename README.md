@@ -18,7 +18,7 @@ This page will in particular allow the user to follow the number of sessions car
 
 1. Clone this repository
    ```sh
-   git clone https://github.com/https://github.com/yflly/YadaLy_11_27012022.git
+   git clone https://github.com/https://github.com/yflly/YadaLy_12_18022022.git
    ```
 2. Install NPM packages
    ```sh
