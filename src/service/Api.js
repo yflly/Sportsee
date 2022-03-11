@@ -4,9 +4,17 @@
  * @param {string} id
  * @returns {object} result
  */
+
 export const getUser = async (id) => {
-  let result = await fetch(`http://localhost:3001/user/${id}`);
-  return await result.json();
+  try {
+    let result = await fetch(`http://localhost:3001/user/${id}`);
+    return {
+      result: await result.json(),
+      status: result.status,
+    };
+  } catch (err) {
+    console.error(err);
+  }
 };
 
 /**
