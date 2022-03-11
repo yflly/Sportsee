@@ -30,7 +30,7 @@ This page will in particular allow the user to follow the number of sessions car
    npm start
    ```
 
-   ## Back-end
+## Back-end
 
 4. This project uses a micro API available with instructions [here](https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard).
 
