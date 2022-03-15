@@ -10,6 +10,13 @@
   border-radius: 5px;
 }
 
+@media (max-width: 1025px) {
+  .containerAverageSession {
+    width: 213px;
+    height: 168px;
+  }
+}
+
 .containerAverageSession h2 {
   position: absolute;
   font-weight: 500;

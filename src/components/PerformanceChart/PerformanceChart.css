@@ -5,3 +5,10 @@
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
   border-radius: 5px;
 }
+
+@media (max-width: 1025px) {
+  .containerPerformance {
+    width: 213px;
+    height: 168px;
+  }
+}

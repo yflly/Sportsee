@@ -10,6 +10,7 @@
   .containerCardInfo {
     padding: 16px;
     margin: 15px 0;
+    width: 158px;
   }
 }
 
@@ -17,6 +18,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-left: 10px;
 }
 
 .containerCardInfoText h3 {
