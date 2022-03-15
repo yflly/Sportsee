@@ -7,12 +7,26 @@
   border-radius: 5px;
 }
 
+@media (max-width: 1025px) {
+  .containerScore {
+    width: 213px;
+    height: 168px;
+  }
+}
+
 .containerScore h2 {
   position: absolute;
   top: 25px;
   left: 30px;
   font-weight: 500;
   font-size: 15px;
+}
+
+@media (max-width: 1025px) {
+  .containerScore h2 {
+    left: 4px;
+    top: 4px;
+  }
 }
 
 .innerCircle {
@@ -41,4 +55,14 @@
   color: rgba(0, 0, 0, 0.8);
   font-weight: 700;
   font-size: 26px;
+}
+
+@media (max-width: 1025px) {
+  .pObjectif {
+    margin: 0;
+  }
+
+  .pObjectif span {
+    font-size: 16px;
+  }
 }
