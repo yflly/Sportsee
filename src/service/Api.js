@@ -1,3 +1,21 @@
+import { getUser as getUserMock } from "./ApiMock";
+import { getUser as getUserServer } from "./ApiServer";
+
+import { getActivity as getActivityMock } from "./ApiMock";
+import { getActivity as getActivityServer } from "./ApiServer";
+
+import { getAverageSession as getAverageSessionMock } from "./ApiMock";
+import { getAverageSession as getAverageSessionServer } from "./ApiServer";
+
+import { getScore as getScoreMock } from "./ApiMock";
+import { getScore as getScoreServer } from "./ApiServer";
+
+import { getKeyData as getKeyDataMock } from "./ApiMock";
+import { getKeyData as getKeyDataServer } from "./ApiServer";
+
+import { getPerformance as getPerformanceMock } from "./ApiMock";
+import { getPerformance as getPerformanceServer } from "./ApiServer";
+
 /**
  * Get user data from the API
  *
@@ -7,78 +25,72 @@
 
 export const getUser = async (id) => {
   try {
-    let result = await fetch(`http://localhost:3001/user/${id}`);
-    return {
-      result: await result.json(),
-      status: result.status,
-    };
-  } catch (err) {
-    console.error(err);
+    return await getUserServer(id);
+  } catch {
+    try {
+      return await getUserMock(id);
+    } catch (error) {
+      console.error(error);
+    }
   }
 };
 
-/**
- * Get user activity from the API
- *
- * @param {string} id
- * @returns {object} result
- */
 export const getActivity = async (id) => {
-  let result = await fetch(`http://localhost:3001/user/${id}/activity`);
-  return await result.json();
+  try {
+    return await getActivityServer(id);
+  } catch {
+    try {
+      return await getActivityMock(id);
+    } catch (error) {
+      console.error(error);
+    }
+  }
 };
 
-/**
- * Get user average session from the API
- *
- * @param {string} id
- * @returns {object} result
- */
 export const getAverageSession = async (id) => {
-  let result = await fetch(`http://localhost:3001/user/${id}/average-sessions`);
-  return await result.json();
+  try {
+    return await getAverageSessionServer(id);
+  } catch {
+    try {
+      return await getAverageSessionMock(id);
+    } catch (error) {
+      console.error(error);
+    }
+  }
 };
 
-/**
- * Get user today score from the API
- *
- * @param {string} id
- * @returns {object} result
- */
 export const getScore = async (id) => {
-  let result = await fetch(`http://localhost:3001/user/${id}/today-score`);
-  return await result.json();
+  try {
+    return await getScoreServer(id);
+  } catch {
+    try {
+      return await getScoreMock(id);
+    } catch (error) {
+      console.error(error);
+    }
+  }
 };
 
-/**
- * Get user activities from the API
- *
- * @param {string} id
- * @returns {object} result
- */
-export const getActivities = async (id) => {
-  let result = await fetch(`http://localhost:3001/user/${id}/activities`);
-  return await result.json();
-};
-
-/**
- * Get user key-data from the API
- *
- * @param {string} id
- * @returns {object} result
- */
 export const getKeyData = async (id) => {
-  let result = await fetch(`http://localhost:3001/user/${id}/key-data`);
-  return await result.json();
+  try {
+    return await getKeyDataServer(id);
+  } catch {
+    try {
+      return await getKeyDataMock(id);
+    } catch (error) {
+      console.error(error);
+    }
+  }
 };
 
-/**
- * Get user performance from the API
- *
- * @param {string} id
- * @returns {object} result
- */
 export const getPerformance = async (id) => {
-  let result = await fetch(`http://localhost:3001/user/${id}/performance`);
-  return await result.json();
+  try {
+    return await getPerformanceServer(id);
+  } catch {
+    try {
+      return await getPerformanceMock(id);
+    } catch (error) {
+      console.error(error);
+    }
+  }
 };
