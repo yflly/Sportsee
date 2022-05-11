@@ -6,6 +6,8 @@ SportSee, a startup dedicated to sports coaching.
 In full growth, the company will today launch a new version of the user profile page.
 This page will in particular allow the user to follow the number of sessions carried out as well as the number of calories burned.
 
+![The picture](./Sportsee.png "picture")
+
 ## Dependencies
 
 - [Node.js (v14.17.1)](https://nodejs.org/en/)
